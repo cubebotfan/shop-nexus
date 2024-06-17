@@ -1,3 +1,8 @@
+using DAL;
+using Entities.Context;
+using Microsoft.EntityFrameworkCore;
+using ShopNexus.Entities;
+
 namespace ShopNexus.Server
 {
     public class Program
@@ -9,6 +14,11 @@ namespace ShopNexus.Server
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddScoped<IContext, ShopNexusContext>();
+            builder.Services.AddScoped<IGenericRepository<Category>, GenericRepository<Category>>();
+            builder.Services.AddScoped<IGenericRepository<Product>, GenericRepository<Product>>();
+            builder.Services.AddScoped<IGenericService<Category>, GenericService<Category>>();
+            builder.Services.AddScoped<IGenericService<Product>, GenericService<Product>>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

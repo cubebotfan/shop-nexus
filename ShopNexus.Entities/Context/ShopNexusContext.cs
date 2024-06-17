@@ -8,7 +8,14 @@ using System.Threading.Tasks;
 
 namespace Entities.Context
 {
-    public class ShopNexusContext : DbContext
+    public interface IContext
+    {
+        public DbSet<Category> Categories { get; }
+        public DbSet<Product> Products { get; }
+
+        public Task<int> SaveChangesAsync();
+    }
+    public class ShopNexusContext : DbContext, IContext
     {
         public ShopNexusContext() : base()
         {
@@ -18,6 +25,11 @@ namespace Entities.Context
         {
             optionsBuilder.UseSqlServer(@"Server=.;Database=ShopNexusDB;Trusted_Connection=True;TrustServerCertificate=True;");
         }
+        public async Task<int> SaveChangesAsync()
+        {
+            return await base.SaveChangesAsync();
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
 
