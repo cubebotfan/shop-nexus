@@ -3,15 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopNexus.Server", "ShopNexus.Server\ShopNexus.Server.csproj", "{FC7C010E-A301-425B-B281-066CAD68EA4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopNexus.Server", "ShopNexus.Server\ShopNexus.Server.csproj", "{FC7C010E-A301-425B-B281-066CAD68EA4E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB784814-594F-4266-B340-36052A3832CA} = {FB784814-594F-4266-B340-36052A3832CA}
+	EndProjectSection
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "shopnexus.client", "shopnexus.client\shopnexus.client.esproj", "{A2D96768-921C-4CA4-80C4-7D54E4747DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopNexus.DAL", "ShopNexus.DAL\ShopNexus.DAL.csproj", "{FB784814-594F-4266-B340-36052A3832CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopNexus.DAL", "ShopNexus.DAL\ShopNexus.DAL.csproj", "{FB784814-594F-4266-B340-36052A3832CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopNexus.BLL", "ShopNexus.BLL\ShopNexus.BLL.csproj", "{14887DE8-5AD7-4616-95DB-BA7AF551803F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopNexus.BLL", "ShopNexus.BLL\ShopNexus.BLL.csproj", "{14887DE8-5AD7-4616-95DB-BA7AF551803F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopNexus.Entities", "ShopNexus.Entities\ShopNexus.Entities.csproj", "{4D5A7666-AF4C-4EDD-90E8-762E1F32AAA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopNexus.Entities", "ShopNexus.Entities\ShopNexus.Entities.csproj", "{4D5A7666-AF4C-4EDD-90E8-762E1F32AAA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
