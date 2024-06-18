@@ -51,7 +51,7 @@ namespace ShopNexus.Entities.DTO.Filter
             List<Category> categories = new List<Category>();
             foreach (var item in items)
             {
-                if (item.CategoryId == categoryId)
+                if (item.ParentCategoryId == categoryId)
                 {
                     categories.Add(item);
                     categories.Concat(getSubCategories(items, item.CategoryId)); /* Recursion Jumpscare */
