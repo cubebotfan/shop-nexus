@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Entities.Context;
 using Microsoft.EntityFrameworkCore;
+using ShopNexus.Entities.DTO.Filter;
 using System;
 
 namespace DAL
@@ -12,6 +13,7 @@ namespace DAL
         Task<List<T>> GetAll();
         Task<T?> GetById(object id);
         Task<bool> Remove(object id);
+        Task<List<T>> GetFiltered(IGenericFilter<T> filter);
     }
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -59,6 +61,12 @@ namespace DAL
             this._entity.Attach(item);
             this._context.Entry(item).State = EntityState.Modified;
             return;
+        }
+
+        public async Task<List<T>> GetFiltered(IGenericFilter<T> filter)
+        {
+            return filter.Filter(this._entity).ToList();
+
         }
     }
 }
