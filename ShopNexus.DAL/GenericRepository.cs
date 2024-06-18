@@ -30,19 +30,18 @@ namespace DAL
         public async Task Add(T item)
         {
             await this._entity.AddAsync(item);
+            this._context.SaveChanges();
             return;
         }
 
         public async Task<List<T>> GetAll()
         {
             return await this._entity.ToListAsync();
-
         }
 
         public async Task<T?> GetById(object id)
         {
             return await this._entity.FindAsync(id);
-
         }
 
         public async Task<bool> Remove(object id)
@@ -51,6 +50,7 @@ namespace DAL
             if (t != null)
             {
                 this._entity.Remove(t);
+                this._context.SaveChanges();
                 return true;
             }
             return false;
@@ -60,13 +60,13 @@ namespace DAL
         {
             this._entity.Attach(item);
             this._context.Entry(item).State = EntityState.Modified;
+            this._context.SaveChanges();
             return;
         }
 
         public async Task<List<T>> GetFiltered(IGenericFilter<T> filter)
         {
             return filter.Filter(this._entity).ToList();
-
         }
     }
 }
