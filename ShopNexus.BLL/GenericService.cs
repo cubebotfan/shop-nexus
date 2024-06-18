@@ -1,9 +1,10 @@
-﻿using Entities;
+﻿using DAL;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 using ShopNexus.Entities.DTO.Filter;
 using System;
 
-namespace DAL
+namespace BLL
 {
     public interface IGenericService<T> where T : class
     {
@@ -18,7 +19,7 @@ namespace DAL
     {
         private IGenericRepository<T> _repository;
 
-        public GenericService(IGenericService<T> service)
+        public GenericService(IGenericRepository<T> service)
         {
             this._repository = service;
         }
