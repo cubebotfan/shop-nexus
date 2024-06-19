@@ -1,23 +1,24 @@
 import ProductCard from "./ProductCard";
 import "../css/home.css";
+import "../css/product.css";
 
 function Home() {
-  return (
-    <main>
-        <section className="hero">
-            <h1>Welcome to Shop Nexus</h1>
-            <p>Your one-stop shop for all your needs.</p>
-        </section>
-        <section className="featured-products">
-            <h2>Featured Products</h2>
-            <div className="product-list">
-                <ProductCard name="Product 1" price="$29.99" />
-                <ProductCard name="Product 2" price="$39.99" />
-                <ProductCard name="Product 3" price="$49.99" />
-            </div>
-        </section>
-    </main>
-  )
+    return (
+        <main>
+            <section className="hero">
+                <h1>Welcome to Shop Nexus</h1>
+                <p>The only place you can feel the connection</p>
+            </section>
+            <section className="featured-products">
+                <h2>Featured Products</h2>
+                <div className="product-list">
+                    <ProductCard name="Product 1" price="$29.99" imgSrc="../img/arun-clarke-ZqnlW6EAel0-unsplash.jpg" />
+                    <ProductCard name="Product 2" price="$39.99" imgSrc="../img/the-graphic-space-FTrGeAy0RW4-unsplash.jpg" />
+                    <ProductCard name="Product 3" price="$49.99" imgSrc="../img/toa-heftiba-9PVUNBgqVRo-unsplash.jpg" />
+                </div>
+            </section>
+        </main>
+    );
 }
 
 export default Home;
