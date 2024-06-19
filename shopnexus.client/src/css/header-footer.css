@@ -205,41 +205,34 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 8em;
-    div
+        div {
+        display: flex;
+        flex-direction: column;
+            h2 {
+                padding-bottom: 5px;
+                border-bottom: solid 1px #fff;
+                font-size: 2.5em;
+                width: 6em;
+            }
 
-{
-    display: flex;
-    flex-direction: column;
-    h2
+            ul {
+                list-style: none;
+                margin-top: 2em;
+            }
 
-{
-    padding-bottom: 5px;
-    border-bottom: solid 1px #fff;
-    font-size: 2.5em;
-    width: 6em;
-}
+            li {
+                font-family: "Rubik", sans-serif;
+                font-size: 13px;
+                cursor: pointer;
+                & + & {
+                    margin-top: 1.5em;
+                }
 
-ul {
-    list-style: none;
-    margin-top: 2em;
-}
-
-li {
-    font-family: "Rubik", sans-serif;
-    font-size: 13px;
-    cursor: pointer;
-    & + &
-
-{
-    margin-top: 1.5em;
-}
-
-&:hover {
-    color: #ffff00;
-}
-
-}
-}
+            &:hover {
+                color: #ffff00;
+            }
+        }
+    }
 }
 
 .footer-contactus {
@@ -248,48 +241,43 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    h2
+    h2 {
+        font-family: "Permanent Marker", sans-serif;
+        text-align: left;
+        width: 15em;
+        font-size: 20px;
+    }
 
-{
-    font-family: "Permanent Marker", sans-serif;
-    text-align: left;
-    width: 15em;
-    font-size: 20px;
-}
+    p {
+        margin-top: 1.5em;
+        font-family: "Rubik", sans-serif;
+        width: 23em;
+        text-align: left;
+        font-size: 13px;
+    }
 
-p {
-    margin-top: 1.5em;
-    font-family: "Rubik", sans-serif;
-    width: 23em;
-    text-align: left;
-    font-size: 13px;
-}
+    .subscription-section {
+        display: flex;
+        width: 97%;
+        margin-top: 2em;
+        input {
+            height: 2.5em;
+            border-radius: 2em;
+            padding: 0 2em;
+            font-family: "Rubik", sans-serif;
+            color: #000;
+        }
 
-.subscription-section {
-    display: flex;
-    width: 97%;
-    margin-top: 2em;
-    input
-
-{
-    height: 2.5em;
-    border-radius: 2em;
-    padding: 0 2em;
-    font-family: "Rubik", sans-serif;
-    color: #000;
-}
-
-button {
-    width: 5em;
-    height: 2.5em;
-    border-radius: 2em;
-    margin-left: 1em;
-    background-color: #ffff00;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-}
+        button {
+            width: 5em;
+            height: 2.5em;
+            border-radius: 2em;
+            margin-left: 1em;
+            background-color: #ffff00;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
 }
 
 main {
