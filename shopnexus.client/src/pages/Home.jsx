@@ -1,3 +1,6 @@
+import ProductCard from "./ProductCard";
+import "../css/home.css"
+
 function Home() {
   return (
     <main>
