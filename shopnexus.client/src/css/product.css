@@ -42,27 +42,27 @@ body {
     font-size: 1rem;
 }
 
-    .nav-links a::after,
-    .navbar-right a::after,
-    .navbar-left a::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        left: 0;
-        bottom: -2px;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-in-out;
-    }
+.nav-links a::after,
+.navbar-right a::after,
+.navbar-left a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
 
-    .nav-links a:hover::after,
-    .navbar-right a:hover::after,
-    .navbar-left a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
+.nav-links a:hover::after,
+.navbar-right a:hover::after,
+.navbar-left a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 .navbar-right a {
     margin: 0 0.5rem;
@@ -159,23 +159,23 @@ body {
     width: fit-content;
 }
 
-    .quantity-box button {
-        border: none;
-        background-color: #F5F6F6;
-        cursor: pointer;
-        padding: 5px 10px;
-    }
+.quantity-box button {
+    border: none;
+    background-color: #F5F6F6;
+    cursor: pointer;
+    padding: 5px 10px;
+}
 
-        .quantity-box button:last-child {
-            border-right: none;
-        }
+.quantity-box button:last-child {
+    border-right: none;
+}
 
-    .quantity-box input {
-        width: 40px;
-        text-align: center;
-        border: none;
-        background-color: #F5F6F6;
-    }
+.quantity-box input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background-color: #F5F6F6;
+}
 
 .actions {
     display: flex;
@@ -183,12 +183,12 @@ body {
     margin-bottom: 10px;
 }
 
-    .actions button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-    }
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
 .add-to-cart {
     width: 400px;
@@ -202,20 +202,20 @@ body {
     margin: 30px 0 0 0;
 }
 
-    .return-policy a {
-        color: #000;
-        text-decoration: underline;
-    }
+.return-policy a {
+    color: #000;
+    text-decoration: underline;
+}
 
 .size-options {
     margin-bottom: 20px;
 }
 
-    .size-options span {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
+.size-options span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
 .sizes {
     display: flex;
@@ -239,11 +239,11 @@ small {
     transition: background-color 0.3s ease;
 }
 
-    .size.selected {
-        background-color: #000;
-        color: #fff;
-        border-radius: 50px;
-    }
+.size.selected {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+}
 
 .top-bar {
     background-color: black;
