@@ -113,9 +113,9 @@ header .access-btns {
 
     .btns-modal {        
         position: absolute;
-        bottom: -10em;
-        width: 10em;
-        height: 10em;
+        bottom: -11em;
+        width: 13em;
+        height: 12em;
         border-radius: 10px;
         background-color: #ece8e0e1;
         display: none;
