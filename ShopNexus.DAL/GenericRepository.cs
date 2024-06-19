@@ -66,7 +66,7 @@ namespace DAL
 
         public async Task<List<T>> GetFiltered(IGenericFilter<T> filter)
         {
-            return filter.Filter(this._entity).ToList();
+            return filter.Filter(this._entity.ToList<T>()).ToList();
         }
     }
 }

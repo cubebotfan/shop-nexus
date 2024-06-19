@@ -10,7 +10,6 @@ namespace ShopNexus.Entities.DTO
     public class CategoryDTO
     {
         public string Name { get; set; }
-        [ForeignKey("Category")]
         public int? ParentCategoryId { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using BLL;
 using Microsoft.AspNetCore.Mvc;
 using ShopNexus.Entities;
 using ShopNexus.Entities.DTO;
+using ShopNexus.Entities.DTO.Filter;
 
 /* Template Controller that came with the project. Delete this later once we have an actual controller */
 
@@ -13,12 +14,14 @@ namespace ShopNexus.Server.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IGenericService<Product> _productService;
+        private readonly IGenericService<Category> _categoryService;
         private readonly IMapper _mapper;
 
 
-        public ProductController(IGenericService<Product> productService, IMapper mapper)
+        public ProductController(IGenericService<Product> productService, IGenericService<Category> categoryService, IMapper mapper)
         {
             this._productService = productService;
+            this._categoryService = categoryService;
             this._mapper = mapper;
         }
 
@@ -77,6 +80,18 @@ namespace ShopNexus.Server.Controllers
                 return Ok();
             }
             return BadRequest();
+        }
+
+        [HttpGet("categories/{categoryId}/products")]
+        public async Task<IActionResult> GetProductsInCategoryId(int categoryId)
+        {
+            ProductFilter filter = new ProductFilter().setFilteredCategories(
+                    await this._categoryService.GetFiltered(
+                        new SubCategoryFilter(categoryId)
+                    )
+                );
+            List<Product> products = await this._productService.GetFiltered(filter);
+            return Ok(products);
         }
     }
 }
