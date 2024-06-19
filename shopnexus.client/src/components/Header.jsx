@@ -2,7 +2,6 @@ import {useState} from 'react'
 import { SlMagnifier } from "react-icons/sl";
 import { FaRegUser } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
-import '../css/header.css'
 
 function Header() {
     const [isClicked, setIsClicked] = useState(false)
