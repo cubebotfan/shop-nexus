@@ -1,28 +1,26 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* css file for header, footer, and main elements */
 
-* {
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    outline: none;
-    border-style: none;
-    box-sizing: border-box;
+:root {
+    --app-header-height: 90px;
+    --app-footer-height: 25rem;
 }
 
-.container {
-    width: min(100% - 30px, 1080px);
-    margin-inline: auto;
+#root {
+    /* Flex containers are needed to use margin: auto */
+    display: flex;
+    flex-direction: column;
+    /* 100vh minimum height to ensure the page is not shorter than the screen */
+    min-height: 100vh;
 }
-
-html, body {height: 100svh;}
 
 /*-----------------------------------------*/
 /*----------------HEADER-------------------*/
 /*-----------------------------------------*/
 
 header {
-    height: 90px;
+    height: var(--app-header-height);
     background-color: #fff;
     display: flex;
     /*border-bottom: solid;*/
@@ -180,4 +178,120 @@ header .cart-section {
             font-size: 22px;
         }
     }
+}
+
+footer {
+    height: var(--app-footer-height);
+    /* Pushes the footer all the way down to the bottom of the page when the screen is taller than the page */
+    margin-top: auto;
+    background-color: #000;
+    width: 100%;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: #fff;
+}
+
+.footer-contactus, .footer-options-list {
+    height: 100%;
+}
+
+.footer-options-list {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+    div
+
+{
+    display: flex;
+    flex-direction: column;
+    h2
+
+{
+    padding-bottom: 5px;
+    border-bottom: solid 1px #fff;
+    font-size: 2.5em;
+    width: 6em;
+}
+
+ul {
+    list-style: none;
+    margin-top: 2em;
+}
+
+li {
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    & + &
+
+{
+    margin-top: 1.5em;
+}
+
+&:hover {
+    color: #ffff00;
+}
+
+}
+}
+}
+
+.footer-contactus {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2
+
+{
+    font-family: "Permanent Marker", sans-serif;
+    text-align: left;
+    width: 15em;
+    font-size: 20px;
+}
+
+p {
+    margin-top: 1.5em;
+    font-family: "Rubik", sans-serif;
+    width: 23em;
+    text-align: left;
+    font-size: 13px;
+}
+
+.subscription-section {
+    display: flex;
+    width: 97%;
+    margin-top: 2em;
+    input
+
+{
+    height: 2.5em;
+    border-radius: 2em;
+    padding: 0 2em;
+    font-family: "Rubik", sans-serif;
+    color: #000;
+}
+
+button {
+    width: 5em;
+    height: 2.5em;
+    border-radius: 2em;
+    margin-left: 1em;
+    background-color: #ffff00;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+}
+}
+
+main {
+
 }
