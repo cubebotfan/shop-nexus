@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-no-undef */
 function Home() {
   return (
     <main>
         <section className="hero">
             <h1>Welcome to Shop Nexus</h1>
-            <p>Your one-stop shop for all your needs.</p>
+            <p>The only shop where you can feel the connections</p>
         </section>
         <section className="featured-products">
             <h2>Featured Products</h2>

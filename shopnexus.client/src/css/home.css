@@ -1,24 +1,56 @@
 .hero {
-    background: url('path/to/hero.jpg') no-repeat center center;
+    height: 600px;
     background-size: cover;
-    padding: 5em 0;
+    padding: 10px 0;
     text-align: center;
-    color: white;
+    background-color: #ffff00;
+}
+
+.hero h1, p {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .featured-products {
-    padding: 2em;
+    margin: 20px 0;
+    padding: 10px;
     text-align: center;
 }
 
 .product-list {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .product-card {
+    height: 120px;
     border: 1px solid #ccc;
-    padding: 1em;
+    padding: 15px 5px 5px 5px;
     text-align: center;
+}
+
+.product-card button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    cursor: pointer;
 }

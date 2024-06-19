@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 function ProductCard({ name, price }) {
     return (
         <div className="product-card">
