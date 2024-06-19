@@ -1,6 +1,4 @@
-'use strict'
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../css/product.css';
 import { useSwipeable } from 'react-swipeable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
