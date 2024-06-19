@@ -9,21 +9,6 @@ function Header() {
 
     return (
         <header>
-            <div className="navbar-left">
-                <a href="/" className="logo">Shop Nexus</a>
-            </div>
-            <div className="navbar-center">
-                <nav className="nav-links">
-                    <a href="/">Home</a>
-                    <a href="/products">Products</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                </nav>
-            </div>
-            <div className="navbar-right">
-                <a href="/cart">Cart</a>
-                <a href="/login">Login</a>
-            </div>
             <h1>Shop<span>Nexus</span></h1>
             <nav>
                 <ul>
