@@ -2,12 +2,28 @@ import { useState } from 'react';
 import { SlMagnifier } from "react-icons/sl";
 import { FaRegUser } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
+import "../css/home.css";
 
 function Header() {
     const [isClicked, setIsClicked] = useState(false)
 
     return (
         <header>
+            <div className="navbar-left">
+                <a href="/" className="logo">Shop Nexus</a>
+            </div>
+            <div className="navbar-center">
+                <nav className="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/products">Products</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div className="navbar-right">
+                <a href="/cart">Cart</a>
+                <a href="/login">Login</a>
+            </div>
             <h1>Shop<span>Nexus</span></h1>
             <nav>
                 <ul>
