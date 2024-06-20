@@ -24,6 +24,18 @@ namespace ShopNexus.Server
             builder.Services.AddScoped<IGenericService<Category>, GenericService<Category>>();
             builder.Services.AddScoped<IGenericService<Product>, GenericService<Product>>();
 
+            builder.Services.AddEndpointsApiExplorer();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:5173")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
 
             // Mapper Configurations
             var mapperConfig = new MapperConfiguration(cfg =>
@@ -58,7 +70,7 @@ namespace ShopNexus.Server
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseCors("AllowReactApp");
 
             app.MapControllers();
 
