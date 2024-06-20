@@ -2,6 +2,7 @@ import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 import "../css/home.css";
 import "../css/product.css";
+import { Link } from 'react-router-dom'
 
 function Home() {
     return (
@@ -19,7 +20,7 @@ function Home() {
                     <ProductCard name="Social Savage" price="$39.99" imgSrc="../img/the-graphic-space-FTrGeAy0RW4-unsplash.jpg" />
                     <ProductCard name="Wild Bright" price="$49.99" imgSrc="../img/toa-heftiba-9PVUNBgqVRo-unsplash.jpg" />
                 </div>
-                <button className="show-all-products-btn" >View All Products</button>
+                <button className="show-all-products-btn" ><Link to='/catalog'>View all Products</Link></button>
             </section>
         </main>
     );
