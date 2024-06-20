@@ -31,11 +31,12 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(3, 33.3%);
-    width: 90%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     height: 90%;
     padding-bottom: 5em;
     position: relative;
-    top: -9em;
     &::-webkit-scrollbar
 
 {
