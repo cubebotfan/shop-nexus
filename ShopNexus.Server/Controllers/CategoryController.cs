@@ -80,10 +80,16 @@ namespace ShopNexus.Server.Controllers
             return BadRequest();
         }
 
+        [HttpGet("categories/{categoryId}/sub-categories")]
+        public async Task<IActionResult> GetCategorySubCategories(int categoryId)
+        {
+            return Ok(await _categoryService.GetFiltered(new SubCategoryFilter(categoryId).ExcludeSelf()));
+        }
+
         [HttpGet("categories/{categoryId}/parent-tree")]
         public async Task<IActionResult> GetCategoryParentTree(int categoryId)
         {
-            return Ok(_categoryService.GetFiltered(new ParentCategoryFilter(categoryId)));
+            return Ok(await _categoryService.GetFiltered(new ParentCategoryFilter(categoryId)));
         }
     }
 }

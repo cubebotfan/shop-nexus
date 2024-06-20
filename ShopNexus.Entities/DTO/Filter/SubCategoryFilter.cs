@@ -54,7 +54,7 @@ namespace ShopNexus.Entities.DTO.Filter
                 if (item.ParentCategoryId == categoryId)
                 {
                     categories.Add(item);
-                    categories.Concat(getSubCategories(items, item.CategoryId)); /* Recursion Jumpscare */
+                    categories = categories.Concat(this.getSubCategories(items, item.CategoryId)).ToList(); /* Recursion Jumpscare */
                     /* This code probably sucks. Reimplement in a better way if you can */
                 }
             }
