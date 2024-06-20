@@ -9,30 +9,12 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 function App() {
-    const [products, setProducts] = useState(null)
-    const API_URL = "https://localhost:7182/api/products"
-
-    useEffect(() => {
-        const fetchTasks = async () => {
-            try {
-                const response = await axios.get(API_URL);
-                console.log(response.data);
-                setProducts(response.data)
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-
-        fetchTasks()
-    }, [])
-
-
-
     return (
         <>
             <Header />
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route exact path="/products" element={<AllProducts />} />
                 <Route exact path="/products/:productId" element={<Product />} />
                 <Route exact path="/catalog" element={products != null ? <Catalog products={products} /> : <div></div>} />
                 {/*default*/}
