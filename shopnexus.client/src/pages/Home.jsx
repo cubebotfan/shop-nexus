@@ -36,7 +36,7 @@ function Home() {
                 <div className="product-list">
                     {products.slice(0,4).map(product => {
                         return (
-                            <ProductCard key={product.productId} name={product.name} price={product.price.toFixed(2)} imgSrc={product.imageURL} />
+                            <ProductCard key={product.productId} name={product.name} productId={product.productId} price={product.price.toFixed(2)} imgSrc={product.imageURL} />
                         )
                     }) }
                 </div>

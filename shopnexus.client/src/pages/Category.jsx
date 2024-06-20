@@ -71,7 +71,7 @@ function Category() {
                     <div className="product-list">
                         {products.map(p => {
                             return (
-                                <ProductCard key={p.productId} name={p.name} price={p.price.toFixed(2)} imgSrc={p.imageURL} />
+                                <ProductCard key={p.productId} name={p.name} productId={p.productId} price={p.price.toFixed(2)} imgSrc={p.imageURL} />
                             )
                         })}
                     </div>
