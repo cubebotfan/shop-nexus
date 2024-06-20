@@ -10,7 +10,7 @@ namespace ShopNexus.Entities.DTO
     public class CategoryDTO
     {
         public string Name { get; set; }
-        public string? ImageURL { get; set; }
+        public string ImageURL { get; set; }
         public int? ParentCategoryId { get; set; }
     }
 }
