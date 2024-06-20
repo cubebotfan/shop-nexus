@@ -27,12 +27,12 @@ function App() {
     }, [])
 
 
-
     return (
         <>
             <Header />
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route exact path="/products" element={<AllProducts />} />
                 <Route exact path="/products/:productId" element={<Product />} />
                 <Route exact path="/catalog" element={products != null ? <Catalog products={products} /> : <div></div>} />
                 {/*default*/}
