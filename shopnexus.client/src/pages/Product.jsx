@@ -1,23 +1,14 @@
 import { useState, useEffect } from 'react';
 import '../css/product.css';
-import { useSwipeable } from 'react-swipeable';
+/*import { useSwipeable } from 'react-swipeable';*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faTruck, faUndo, faStar, faStarHalfAlt, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
-import mainImage1 from '../img/the-graphic-space-FTrGeAy0RW4-unsplash.jpg';
-import mainImage2 from '../img/toa-heftiba-9PVUNBgqVRo-unsplash.jpg';
-import mainImage3 from '../img/tom-garritty-Mif7hfHkOHE-unsplash.jpg';
-import mainImage4 from '../img/arun-clarke-ZqnlW6EAel0-unsplash.jpg';
-import mainImage5 from '../img/nick-fithen-ixG2sEptSOM-unsplash.jpg';
-import mainImage6 from '../img/sofia-lyu-7HwkHZ5Zabw-unsplash.jpg';
-
-const images = [mainImage1, mainImage2, mainImage3, mainImage4, mainImage5, mainImage6];
-
 const Product = () => {
     const [quantity, setQuantity] = useState(1);
-    const [currentIndex, setCurrentIndex] = useState(0);
+/*    const [currentIndex, setCurrentIndex] = useState(0);*/
     const [selectedSize, setSelectedSize] = useState(null);
     const { productId } = useParams();
     const [productDetails, setProductDetails] = useState(null);
@@ -37,7 +28,7 @@ const Product = () => {
                 url: `${apiLink}/categories/${res.data.categoryId}/parent-tree`,
                 method: "GET"
             }).then(res => {
-                setCategoryTree(res.data.result);
+                setCategoryTree(res.data.result.reverse());
             }).catch(error => {
                 
             })
@@ -52,7 +43,7 @@ const Product = () => {
         setQuantity(newQuantity);
     };
 
-    const handleNext = () => {
+/*    const handleNext = () => {
         setCurrentIndex((currentIndex + 1) % images.length);
     };
 
@@ -65,7 +56,7 @@ const Product = () => {
         onSwipedRight: () => handlePrev(),
         preventDefaultTouchmoveEvent: true,
         trackMouse: true
-    });
+    });*/
 
     const handleSizeSelect = (size) => {
         setSelectedSize(size);
@@ -80,10 +71,10 @@ const Product = () => {
                     })}
                 </div>
                 <div className="product-details">
-                    <div className="product-images" {...handlers}>
-                        <FontAwesomeIcon icon={faArrowLeft} className="arrow arrow-left" onClick={handlePrev} />
-                        <img src={images[currentIndex]} alt="Airpods Max" className="main-image" />
-                        <FontAwesomeIcon icon={faArrowRight} className="arrow arrow-right" onClick={handleNext} />
+                    <div className="product-images"> {/*...handlers}*/}
+                        {/*<FontAwesomeIcon icon={faArrowLeft} className="arrow arrow-left" onClick={handlePrev} />*/}
+                        <img src={productDetails.imageURL} alt="" className="main-image" />
+                        {/*<FontAwesomeIcon icon={faArrowRight} className="arrow arrow-right" onClick={handleNext} />*/}
                     </div>
 
                     <div className="product-info">
