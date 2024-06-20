@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 function App() {
     const [products, setProducts] = useState(null)
-    const API_URL = "https://localhost:7182/api/products"
+    const API_URL = "https://localhost:7182/products"
 
     useEffect(() => {
         const fetchTasks = async () => {
