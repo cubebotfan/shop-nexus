@@ -4,6 +4,8 @@
 .category-page h2 {
     margin-top: 10px;
     text-align: center;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 40px;
 }
 
 .category-page > *:last-child {
