@@ -3,11 +3,14 @@ import Footer from "./components/Footer";
 import Product from "./pages/Product"
 import axios from 'axios'
 import Home from "./pages/Home";
+import './css/app.css';
 import Catalog from "./pages/Catalog"
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 function App() {
     const [products, setProducts] = useState(null)
-    const API_URL = "https://localhost:7182/products"
+    const API_URL = "https://localhost:7182/api/products"
 
     useEffect(() => {
         const fetchTasks = async () => {
