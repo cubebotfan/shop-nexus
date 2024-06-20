@@ -38,6 +38,11 @@ namespace ShopNexus.Server
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", policy => policy.WithOrigins("https://localhost:5173")); /*Not safe outside testing.*/
+            });
+
             var app = builder.Build();
 
             app.UseDefaultFiles();
@@ -58,6 +63,8 @@ namespace ShopNexus.Server
             app.MapControllers();
 
             app.MapFallbackToFile("/index.html");
+
+            app.UseCors("AllowOrigin");
 
             app.Run();
         }
