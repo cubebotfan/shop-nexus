@@ -9,12 +9,14 @@
     place-items: center;
     position: relative;
     margin-bottom: 5em;
+    h2
 
-    h2 {
-        font-family: "Permanent Marker", sans-serif;
-        font-size: 40px;
-        margin: 0.5em 0;
-    }
+{
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 40px;
+    margin: 0.5em 0;
+}
+
 }
 
 .close-btn {
@@ -32,22 +34,29 @@
     width: 90%;
     height: 90%;
     padding-bottom: 5em;
+    position: relative;
+    top: -9em;
+    &::-webkit-scrollbar
 
-    &::-webkit-scrollbar {
-        width: 7px; 
-        height: 12px; 
-    }
-    
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background-color: #000; 
-        border-radius: 10px;
+{
+    width: 7px;
+    height: 12px;
+}
+
+&::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+&::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 10px;
+}
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #ffff00;
     }
 
-    &::-webkit-scrollbar-thumb:hover { background-color: #ffff00; }
-
-    .product-card {margin: 1em 0;}
+.product-card {
+    margin: 1em 0;
+}
 }
