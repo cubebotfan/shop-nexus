@@ -1,4 +1,4 @@
-import image from '../img/hero-banner-image.jpg'
+import image from '/public/img/hero-banner-image.jpg'
 
 function ProductCard({ name, price, imgSrc }) {
     return (

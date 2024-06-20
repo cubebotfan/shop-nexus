@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Product from "./pages/Product"
 import axios from 'axios'
 import Home from "./pages/Home";
+import AllProducts from './pages/AllProducts';
 
 
 function App() {    
@@ -26,6 +27,7 @@ function App() {
             <Header />
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route elxact path="/all-products" element={<AllProducts />} />
                 <Route exact path="/products/:productId" element={<Product />} />
                 {/*default*/}
                 {/*<Route path='/*' element={<Navigate to="/" replace="true" />} />*/}

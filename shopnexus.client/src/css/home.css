@@ -2,7 +2,7 @@
 
 .hero {
     height: 600px;
-    background: url("../img/hero-banner-image.jpg") no-repeat center center / cover;
+    background: url("/public/img/hero-banner-image.jpg") no-repeat center center / cover;
 }
 
 .background-dark-filter {
@@ -160,4 +160,13 @@ h2 {
         }
 
     }
+}
+
+.change button {
+    height: 40px;
+    width: 25px;
+    place-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
