@@ -51,14 +51,14 @@ function Category() {
         })
     }, []);
     return (
-        <main className="category-page">
+        <main className="category-page container">
             <div className="breadcrumb">
                 {categoryTree.map((category, i, a) => {
                     return (<a href={`/categories/${category.categoryId}`} key={category.categoryId}>{category.name}{(i+1 < a.length) ? " /" : ""}</a>)
                 })}
             </div>
             {(categoryDetails) ?
-            <div className="container">
+            <div>
                     <h2> Subcategories in "{categoryDetails.name}"</h2>
                     <div className="product-list">
                         {subCategories.map(c => {

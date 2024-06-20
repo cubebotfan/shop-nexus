@@ -12,6 +12,7 @@ namespace ShopNexus.Server.Controllers
 {
     [ApiController]
     /*[Route("[controller]")]*/
+    [Route("api/")]
     [EnableCors("AllowReactApp")]
     public class ProductController : ControllerBase
     {
