@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import "../css/home.css";
@@ -43,6 +43,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <button>View all our Products</button>
         </main>
     );
 }
