@@ -1,5 +1,6 @@
 using AutoMapper;
 using BLL;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ShopNexus.Entities;
 using ShopNexus.Entities.DTO;
@@ -10,7 +11,8 @@ using ShopNexus.Entities.DTO.Filter;
 namespace ShopNexus.Server.Controllers
 {
     [ApiController]
-    [Route("api/")]
+    /*[Route("[controller]")]*/
+    [EnableCors("AllowReactApp")]
     public class ProductController : ControllerBase
     {
         private readonly IGenericService<Product> _productService;
