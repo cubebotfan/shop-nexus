@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "../css/home.css";
 import "../css/product.css";
+import { Link } from 'react-router-dom'
 
 function Home() {
     const [isModalClosed, setIsModalClosed] = useState(true)
@@ -39,7 +40,7 @@ function Home() {
                         )
                     }) }
                 </div>
-                <button className="show-all-products-btn" >View All Products</button>
+                <button className="show-all-products-btn" ><Link to='/catalog'>View all Products</Link></button>
             </section>
         </main>
     );
