@@ -60,15 +60,16 @@ function Category() {
             {(categoryDetails) ?
             <div>
                     <h2> Subcategories in "{categoryDetails.name}"</h2>
-                    <div className="product-list">
+                    <div className="catalog">
                         {subCategories.map(c => {
                             return (
-                                <CategoryCard key={c.categoryId} name={c.name} categoryId={ c.categoryId} imgSrc={c.imageURL} />
+                                <CategoryCard key={c.categoryId} name={c.name} categoryId={c.categoryId} imgSrc={c.imageURL} />
+
                             )
                         })}
                     </div>
                     <h2> Products in "{categoryDetails.name}"</h2>
-                    <div className="product-list">
+                    <div className="catalog">
                         {products.map(p => {
                             return (
                                 <ProductCard key={p.productId} name={p.name} productId={p.productId} price={p.price.toFixed(2)} imgSrc={p.imageURL} />

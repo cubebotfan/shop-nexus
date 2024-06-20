@@ -9,10 +9,10 @@ function Header() {
 
     return (
         <header>
-            <h1>Shop<span>Nexus</span></h1> 
+            <h1><Link to='/'>Shop<span>Nexus</span></Link></h1> 
             <nav>
                 <ul>
-                    <li>Categories</li>
+                    <li><Link to='/categories/1'>Categories</Link></li>
                     <li><Link to='/catalog'>All Products</Link></li>
                     <li>About Us</li>
                 </ul>
