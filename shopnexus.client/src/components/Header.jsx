@@ -2,6 +2,7 @@ import {useState} from 'react'
 import { SlMagnifier } from "react-icons/sl";
 import { FaRegUser } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom'
 
 function Header() {
     const [isClicked, setIsClicked] = useState(false)
@@ -12,7 +13,7 @@ function Header() {
             <nav>
                 <ul>
                     <li>Categories</li>
-                    <li>Offers</li>
+                    <li><Link to='/catalog'>All Products</Link></li>
                     <li>About Us</li>
                 </ul>
             </nav>  
