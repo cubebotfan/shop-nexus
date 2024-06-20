@@ -12,9 +12,9 @@ function App() {
             <Header />
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route exact path="/products/:productId" element={<Product />} />
                 {/*default*/}
                 <Route path='/*' element={<Navigate to="/" replace="true" />} />
-                <Route exact path="/product" element={<Product/> } />
             </Routes>
             <Footer />
         </>

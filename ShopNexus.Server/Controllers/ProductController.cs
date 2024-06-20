@@ -10,7 +10,7 @@ using ShopNexus.Entities.DTO.Filter;
 namespace ShopNexus.Server.Controllers
 {
     [ApiController]
-    /*[Route("[controller]")]*/
+    [Route("api/")]
     public class ProductController : ControllerBase
     {
         private readonly IGenericService<Product> _productService;
@@ -85,12 +85,13 @@ namespace ShopNexus.Server.Controllers
         [HttpGet("categories/{categoryId}/products")]
         public async Task<IActionResult> GetProductsInCategoryId(int categoryId)
         {
-            ProductFilter filter = new ProductFilter().setFilteredCategories(
+            List<Product> products = await this._productService.GetFiltered(
+                new ProductFilter().setFilteredCategories(
                     await this._categoryService.GetFiltered(
                         new SubCategoryFilter(categoryId)
                     )
-                );
-            List<Product> products = await this._productService.GetFiltered(filter);
+                )
+            );
             return Ok(products);
         }
     }

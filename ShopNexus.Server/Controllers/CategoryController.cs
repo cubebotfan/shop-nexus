@@ -3,13 +3,14 @@ using BLL;
 using Microsoft.AspNetCore.Mvc;
 using ShopNexus.Entities;
 using ShopNexus.Entities.DTO;
+using ShopNexus.Entities.DTO.Filter;
 
 /* Template Controller that came with the project. Delete this later once we have an actual controller */
 
 namespace ShopNexus.Server.Controllers
 {
     [ApiController]
-    /*[Route("[controller]")]*/
+    [Route("api/")]
     public class CategoryController : ControllerBase
     {
         private readonly IGenericService<Category> _categoryService;
@@ -77,6 +78,12 @@ namespace ShopNexus.Server.Controllers
                 return Ok();
             }
             return BadRequest();
+        }
+
+        [HttpGet("categories/{categoryId}/parent-tree")]
+        public async Task<IActionResult> GetCategoryParentTree(int categoryId)
+        {
+            return Ok(_categoryService.GetFiltered(new ParentCategoryFilter(categoryId)));
         }
     }
 }

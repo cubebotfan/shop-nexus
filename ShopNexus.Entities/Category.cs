@@ -14,6 +14,7 @@ namespace ShopNexus.Entities
         [Key]
         public int CategoryId { get; set; }
         public string Name { get; set; }
+        public string? ImageURL { get; set; }
         [ForeignKey("Category")]
         public int? ParentCategoryId { get; set; }
     }
