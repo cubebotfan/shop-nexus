@@ -1,2 +1,10 @@
 @charset "utf-8";
 @import url(./header-footer.css);
+
+.category-page h2 {
+    margin-top: 10px;
+}
+
+.category-page > *:last-child {
+    margin-bottom: 20px;
+}

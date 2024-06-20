@@ -28,7 +28,7 @@ const Product = () => {
                 url: `${apiLink}/categories/${res.data.categoryId}/parent-tree`,
                 method: "GET"
             }).then(res => {
-                setCategoryTree(res.data.result.reverse());
+                setCategoryTree(res.data.reverse());
             }).catch(error => {
                 
             })
@@ -64,10 +64,10 @@ const Product = () => {
 
     return (
         (productDetails) ?
-            <div className="product-page">
+            <main className="product-page">
                 <div className="breadcrumb">
                     {categoryTree.map((category, i, a) => {
-                        return (<a href="/" key={category.categoryId}>{category.name}{(i<a.length)? " /":""}</a>)
+                        return (<a href={`/categories/${category.categoryId}`} key={category.categoryId}>{category.name}{(i+1<a.length)? " /":""}</a>)
                     })}
                 </div>
                 <div className="product-details">
@@ -127,7 +127,7 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         : ""
     );
 };
